@@ -1,0 +1,11 @@
+- config:
+    name: 验证能否打开主页
+    base_url: http://47.107.178.45/phpwind/
+
+- test:
+     name: open phpwind page
+     request:
+        url: /
+        method: GET
+     validate:
+        - eq: ["status_code",200]
